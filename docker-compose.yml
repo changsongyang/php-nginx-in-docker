@@ -13,3 +13,8 @@ services:
       - ./conf/vhosts:/etc/nginx/conf.d
       - ./logs:/var/log/nginx
       - ./www/:/var/www/
+  php5:
+    container_name: php5
+    restart: always
+    image: php:5.6-apache
+    
