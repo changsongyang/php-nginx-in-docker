@@ -14,4 +14,4 @@ echo '.'
 
 docker pull nginx:1.13
 
-docker pull php:5.6-apache
+docker pull php:5.6-fpm

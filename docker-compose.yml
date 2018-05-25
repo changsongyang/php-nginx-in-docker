@@ -16,5 +16,6 @@ services:
   php5:
     container_name: php5
     restart: always
-    image: php:5.6-apache
-    
+    image: php:5.6-fpm
+    ports: 
+      - 9000:9000
