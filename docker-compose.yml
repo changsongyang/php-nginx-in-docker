@@ -22,6 +22,7 @@ services:
     image: php:5.6-fpm
     volumes:
       - ./www/:/var/www/
+      - ./extension/:/extension
     expose: 
       - 9000
     networks:
@@ -30,8 +31,8 @@ services:
       - /bin/bash
       - -c 
       - |
-          cd /tmp
-          wget http://pecl.php.net/get/PDO_MYSQL-1.0.2.tgz
+          tar -zxvf /extension/PDO_MYSQL-1.0.2.tgz /tmp/pdo_mysql
+          
 networks:
   php-server:
     driver: bridge
