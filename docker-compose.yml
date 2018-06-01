@@ -27,11 +27,6 @@ services:
       - 9000
     networks:
       - php-server
-    command: 
-      - /bin/bash
-      - -c 
-      - |
-          tar -zxvf /extension/PDO_MYSQL-1.0.2.tgz /tmp/pdo_mysql
           
 networks:
   php-server:
